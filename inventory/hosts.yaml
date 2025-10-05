@@ -1,20 +1,40 @@
 ---
 all:
   children:
+    debian:
+      hosts:
+        gmktec:
+        yoga:
+        pve:
+    fedora:
+      children:
+        fedora_amd64:
+          hosts:
+            beelink:
+            pangolin:
+        fedora_arm64:
+          hosts:
+            asahi:
     niri:
       hosts:
-        fedora-ks:
-        docker:
-
-    work:
+        asahi:
+        beelink:
+        pangolin:
+    macos:
       hosts:
-        fedora-ks:
-        docker:
+        macbook:
 
   hosts:
-    fedora-ks:
+    asahi:
+    beelink:
     docker:
       ansible_host: host.docker.internal
+    gmktec:
+    macbook:
+      ansible_host: host.docker.internal
+    pangolin:
+    pve:
+    yoga:
 
   vars:
-    ansible_user: proxmox
+    ansible_user: jdratlif

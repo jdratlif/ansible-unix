@@ -1,0 +1,10 @@
+---
+git_config_extra:
+  user:
+    email: jdratlif@globalnoc.iu.edu
+  core:
+    editor: code --wait
+  diff:
+    tool: default-difftool
+  'diff "default-difftool"':
+    cmd: code --wait --diff $LOCAL $REMOTE

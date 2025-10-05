@@ -1,0 +1,11 @@
+---
+sudoers_rules:
+  apt:
+    commands: /usr/local/bin/apt
+    group: sudo
+  power:
+    commands:
+      - /usr/sbin/poweroff
+      - /usr/sbin/shutdown
+      - /usr/sbin/reboot
+    group: sudo

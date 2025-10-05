@@ -1,0 +1,13 @@
+---
+bash_aliases_extra:
+  fcns: print -l ${(ok)functions[(I)[^_]*]}
+
+bash_environment_skip: [HISTCONTROL]
+
+bash_custom_config_extra:
+  "bash history options": |-
+    setopt histappend
+    setopt histverify
+
+bash_use_upstream_sources: false
+bash_zsh: true
