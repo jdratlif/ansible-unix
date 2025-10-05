@@ -1,0 +1,34 @@
+---
+apps_flatpaks:
+  - com.obsproject.Studio
+  - net.cozic.joplin_desktop
+  - org.gnome.Evolution
+
+apps_packages:
+  - acl
+  - bind9-dnsutils
+  - btop
+  - cifs-utils
+  - freerdp3-x11
+  - git
+  - kitty
+  - libsecret-1-dev
+  - opensc
+  - openssh-server
+  - podman-compose
+  - podman-docker
+  - smplayer
+  - vim
+
+apps_pkgs:
+  1password: https://downloads.1password.com/linux/debian/amd64/stable/1password-latest.deb
+  code: https://vscode.download.prss.microsoft.com/dbazure/download/stable/618725e67565b290ba4da6fe2d29f8fa1d4e3622/code_1.107.0-1765353552_amd64.deb
+  google-chrome-stable: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  slack-desktop: https://downloads.slack-edge.com/desktop-releases/linux/x64/4.47.69/slack-desktop-4.47.69-amd64.deb
+  zoom: https://zoom.us/client/latest/zoom_amd64.deb
+
+# add apps_special_tailscale_authkey if you want to start the tailnet
+# do not place this in git -- it's a password!
+apps_special:
+  - tailscale
+  - uv

@@ -1,0 +1,13 @@
+---
+niri_kdl_outputs:
+  "Dell Inc. DELL U2722DE 4SR7GH3": |-
+    position x=0 y=0
+  "Dell Inc. DELL U2722DE 2NR7GH3": |-
+    position x=2560 y=0
+
+  # HDMI-A-1: |-
+  #   mode "2560x1440@119.989"
+  #   position x=0 y=0
+  # HDMI-A-2: |-
+  #   mode "2560x1440@119.989"
+  #   position x=2560 y=0

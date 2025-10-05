@@ -1,0 +1,11 @@
+---
+sudoers_rules:
+  dnf:
+    commands: /usr/bin/apt
+    group: sudo
+  power:
+    commands:
+      - /usr/sbin/poweroff
+      - /usr/sbin/shutdown
+      - /usr/sbin/reboot
+    group: sudo
