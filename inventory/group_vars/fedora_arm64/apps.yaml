@@ -1,0 +1,6 @@
+---
+apps_flatpaks_extra:
+  - net.cozic.joplin_desktop
+
+apps_special:
+  - 1password

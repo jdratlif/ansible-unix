@@ -1,0 +1,4 @@
+---
+apps_packages:
+  - alsa-sof-firmware
+  - iwlwifi-mvm-firmware
