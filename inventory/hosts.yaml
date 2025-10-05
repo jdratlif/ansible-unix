@@ -3,18 +3,40 @@ all:
   children:
     niri:
       hosts:
-        fedora-ks:
+        asahi:
+        beelink:
         docker:
-
-    work:
+        pangolin16:
+        yoga4:
+    fedora:
       hosts:
-        fedora-ks:
+        asahi:
+        beelink:
         docker:
+        pangolin16:
+        yoga4:
+    fedora_amd64:
+      hosts:
+        beelink:
+        docker:
+        pangolin16:
+        yoga4:
+    fedora_arm64:
+      hosts:
+        asahi:
+    macos:
+      hosts:
+        macbook:
 
   hosts:
-    fedora-ks:
+    asahi:
+    beelink:
     docker:
       ansible_host: host.docker.internal
+    macbook:
+      ansible_host: host.docker.internal
+    pangolin16:
+    yoga4:
 
   vars:
-    ansible_user: proxmox
+    ansible_user: jdratlif
