@@ -1,0 +1,9 @@
+---
+apps_flatpaks_extra:
+  - net.cozic.joplin_desktop
+
+apps_rpms:
+  code: https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-arm64
+
+apps_special:
+  - 1password

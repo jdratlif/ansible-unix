@@ -1,25 +1,33 @@
 ---
 apps_flatpaks:
-  - com.obsproject.Studio
+  - org.videolan.VLC
 
 apps_packages:
+  - acl
+  - bind-utils
   - brave-browser
   - btop
+  - cascadia-fonts-all
   - chromium
+  - cifs-utils
+  - evolution-ews
   - firefox
-  - kitty
+  - freerdp
   - git
+  - gnome-calculator
+  - kitty
+  - opensc
+  - openssl
+  - podman-compose
+  - podman-docker
+  - terminus-fonts-console
   - vim-default-editor
 
 apps_repos:
   brave-browser: https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 
-apps_rpms:
-  code: https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-x64
-
 # add apps_special_tailscale_authkey if you want to start the tailnet
 # do not place this in git -- it's a password!
 apps_special:
-  - joplin
   - tailscale
   - uv
