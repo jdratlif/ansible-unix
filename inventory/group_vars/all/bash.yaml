@@ -62,7 +62,7 @@ bash_prompt: |-
       local path="\[\033[1;34m\]\w\[\033[0m\]"
 
       # create full prompt
-      PS1="\$(__bp_error)${username} \$(__bp_arrow) ${path}\$(__bp_git) $ "
+      PS1="\$(__bp_error)${username} \$(__bp_arrow) ${path}\$(__bp_git)\n$ "
       unset -f __bash_prompt
   }
   __bash_prompt
