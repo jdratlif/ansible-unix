@@ -5,7 +5,7 @@ bash_aliases:
   fix_perms: find . \( -type f -exec chmod 644 {} + \) -o \( -type d -exec chmod 755 {} + \)
   ipt: sudo iptables --line-numbers -nvL
   ip6t: sudo ip6tables --line-numbers -nvL
-  ssh_kill: pkill -f .ssh/cp-$(whoami)@
+  ssh_kill: pkill -u "$USER" -f '\[mux\]'
   fcns: compgen -A function | grep -v '^_'
 
 bash_environment:
