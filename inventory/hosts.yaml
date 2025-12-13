@@ -5,24 +5,17 @@ all:
       hosts:
         beelink:
         pangolin:
+        yoga:
     fedora:
       children:
         fedora_amd64:
           hosts:
-            # beelink:
-            # docker:
-            # pangolin16:
-            yoga4:
         fedora_arm64:
           hosts:
             asahi:
     niri:
       hosts:
         asahi:
-        # beelink:
-        # docker:
-        # pangolin16:
-        # yoga4:
     macos:
       hosts:
         macbook:
@@ -36,9 +29,8 @@ all:
     macbook:
       ansible_host: host.docker.internal
     pangolin:
-    # pangolin16:
     pve:
-    yoga4:
+    yoga:
 
   vars:
     ansible_user: jdratlif
