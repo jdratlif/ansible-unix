@@ -1,3 +1,5 @@
 ---
 firewalld_interface_zones:
   tailscale0: trusted
+firewalld_trusted_subnets:
+  - 192.168.1.0/24
