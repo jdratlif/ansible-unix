@@ -1,3 +1,10 @@
+---
+bash_aliases_extra:
+  aide_accept: sudo mv /var/lib/aide/aide.db.new /var/lib/aide/aide.db
+  aide_nagios: sudo truncate -s0 /var/log/aide/aide.log
+  aide_run: sudo aide --update | less -X
+  aide_showlog: sudo cat /var/log/aide/aide.log
+
 bash_functions_extra:
   p: |-
     if [[ -z "$1" ]]; then action="run"; else action=$1; shift; fi
