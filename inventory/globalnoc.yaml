@@ -60,12 +60,9 @@ all:
             backup.grnoc.iu.edu: {}
             banders-dev.grnoc.iu.edu: {}
             bastion-test.lab.grnoc.iu.edu: {}
+            bestaple-dev.grnoc.iu.edu: {}
             bgeels-dev-7.grnoc.iu.edu: {}
             bgeels-dev-8.grnoc.iu.edu: {}
-            bmcgough-dev-el8.grnoc.iu.edu: {}
-            bmcgough-dev7.grnoc.iu.edu: {}
-            bmcgough-gnui-dev.grnoc.iu.edu: {}
-            bmcgough-ol8.grnoc.iu.edu: {}
             bsiefers-dev-7.grnoc.iu.edu: {}
             bsiefers-dev-ol8.grnoc.iu.edu: {}
             build-new.grnoc.iu.edu: {}
@@ -146,6 +143,7 @@ all:
             cpe.sori.light.globalnoc.iu.edu: {}
             csacco-dev.grnoc.iu.edu: {}
             csacco-psbuild-dev.grnoc.iu.edu: {}
+            cwk.grnoc.iu.edu: {}
             daripley-dev8.grnoc.iu.edu: {}
             davihard-dev.grnoc.iu.edu: {}
             davihard-dev8.grnoc.iu.edu: {}
@@ -187,7 +185,6 @@ all:
             dns-dev.grnoc.iu.edu: {}
             dns.bldc.grnoc.iu.edu: {}
             dns.ctc.grnoc.iu.edu: {}
-            dnsgen-stage.grnoc.iu.edu: {}
             drarvese-dev7.grnoc.iu.edu: {}
             drarvese-dev8.grnoc.iu.edu: {}
             drarvese-test.grnoc.iu.edu: {}
@@ -219,24 +216,19 @@ all:
             grafana-sandbox.bldc.grnoc.iu.edu: {}
             grafana-stage.misen.grnoc.iu.edu: {}
             grafana.areon.net: {}
-            grafana.caaren.grnoc.iu.edu: {}
             grafana.campuses.grnoc.iu.edu: {}
-            grafana.gpn.grnoc.iu.edu: {}
             grafana.grnoc.iu.edu: {}
             grafana.ilight.net: {}
             grafana.indiana.gigapop.net: {}
             grafana.intl.grnoc.iu.edu: {}
-            grafana.iron.grnoc.iu.edu: {}
             grafana.linkoregon.org: {}
             grafana.lwp.grnoc.iu.edu: {}
             grafana.misen.grnoc.iu.edu: {}
-            grafana.net.cen.ct.gov: {}
             grafana.net.rt.iu.edu: {}
             grafana.net.uits.iu.edu: {}
             grafana.noc.onenet.net: {}
             grafana.omnipop.btaa.org: {}
             grafana.oshean.org: {}
-            grafana.sox.net: {}
             gscs-backup.ctc.oshean.org: {}
             gscs-backup.net.cen.ct.gov: {}
             gscs.bldc.oshean.org: {}
@@ -280,10 +272,11 @@ all:
             idp.bldc.oshean.org: {}
             idp.ctc.grnoc.iu.edu: {}
             idp.ctc.oshean.org: {}
+            idp.fyvl.areon.net: {}
             idp.icb.grnoc.iu.edu: {}
+            idp.nlrk.areon.net: {}
             idp.noc.onenet.net: {}
             indec.ctc.grnoc.iu.edu: {}
-            io3.bldc.grnoc.iu.edu: {}
             irnc-grm.grnoc.iu.edu: {}
             iron-members.grnoc.iu.edu: {}
             island.onenet.net: {}
@@ -293,6 +286,7 @@ all:
             jdratlif-dev8.bldc.grnoc.iu.edu: {}
             jdratlif-dev8.ctc.grnoc.iu.edu: {}
             jdratlif-test.areon.net: {}
+            jdratlif-test.ll.grnoc.iu.edu: {}
             jefferson.ind.net: {}
             jenkins-build-test.grnoc.iu.edu: {}
             jenkins-cds-test.grnoc.iu.edu: {}
@@ -317,7 +311,6 @@ all:
             kerb-new.bldc.net.cen.ct.gov: {}
             kerb-new.ctc.net.cen.ct.gov: {}
             kerb-new.noc.onenet.net: {}
-            kerb.areon.net: {}
             kerb.bldc.grnoc.iu.edu: {}
             kerb.bldc.net.cen.ct.gov: {}
             kerb.bldc.oshean.org: {}
@@ -335,8 +328,6 @@ all:
             kube-node2.bldc.grnoc.iu.edu: {}
             kvm-1.wbs.grnoc.iu.edu: {}
             kvm-2.wbs.grnoc.iu.edu: {}
-            lcns-srv.bldc.ilight.net: {}
-            lcns-srv.ctc.ilight.net: {}
             ldap-01.globalnoc.mcnc.org: {}
             ldap-02.globalnoc.mcnc.org: {}
             ldap-dev-ol8.grnoc.iu.edu: {}
@@ -356,7 +347,6 @@ all:
             ldap.fyvl.areon.net: {}
             ldap.nlrk.areon.net: {}
             ldap.noc.onenet.net: {}
-            lghanta-dev.grnoc.iu.edu: {}
             light-db.light.bldc.globalnoc.iu.edu: {}
             light-db.light.ctc.globalnoc.iu.edu: {}
             lightweight-db-dev.grnoc.iu.edu: {}
@@ -377,6 +367,8 @@ all:
             m.ctc.k8s.oshean.org: {}
             m.ctc.k8s.test.grnoc.iu.edu: {}
             m.fyvl.k8s.areon.net: {}
+            m.ll.k8s.grnoc.iu.edu: {}
+            m.ll.k8s.test.grnoc.iu.edu: {}
             m.nlrk.k8s.areon.net: {}
             m1.bldc.sea.grnoc.iu.edu: {}
             m1.ctc.sea.grnoc.iu.edu: {}
@@ -394,7 +386,6 @@ all:
             mail.ctc.grnoc.iu.edu: {}
             mail.ll.grnoc.iu.edu: {}
             map-tiles.grnoc.iu.edu: {}
-            mbalas-dev.grnoc.iu.edu: {}
             metranova-dev.grnoc.iu.edu: {}
             mon-01.globalnoc.mcnc.org: {}
             mon-02.globalnoc.mcnc.org: {}
@@ -415,8 +406,6 @@ all:
             mon-linkor.ctc.grnoc.iu.edu: {}
             mon-loni.bldc.grnoc.iu.edu: {}
             mon-loni.ctc.grnoc.iu.edu: {}
-            mon-new.fyvl.areon.net: {}
-            mon-new.nlrk.areon.net: {}
             mon-stage.grnoc.iu.edu: {}
             mon-test-01.globalnoc.mcnc.org: {}
             mon.bldc.grnoc.iu.edu: {}
@@ -434,8 +423,6 @@ all:
             mongo1.tsds.bldc.grnoc.iu.edu: {}
             mongo3.tsds.grnoc.iu.edu: {}
             narex-netsage-portal.grnoc.iu.edu: {}
-            netdisco-dev.grnoc.iu.edu: {}
-            netdisco2.noc.iu.edu: {}
             neteng-sb.ctc.grnoc.iu.edu: {}
             neteng.ctc.grnoc.iu.edu: {}
             netsage-archive.grnoc.iu.edu: {}
@@ -478,7 +465,7 @@ all:
             njuers-dev.grnoc.iu.edu: {}
             njuers-doc.grnoc.iu.edu: {}
             njuers8-dev.grnoc.iu.edu: {}
-            nocmon-ol8.noc.onenet.net: {}
+            nocmon-el7.noc.onenet.net: {}
             nocmon.noc.onenet.net: {}
             ntp.bldc.grnoc.iu.edu: {}
             ntp.ll.indiana.gigapop.net: {}
@@ -510,6 +497,8 @@ all:
             otp.areon.net: {}
             otp.bldc.oshean.org: {}
             otp.ctc.oshean.org: {}
+            otp.fyvl.areon.net: {}
+            otp.nlrk.areon.net: {}
             otp.noc.onenet.net: {}
             pas.jeuno.ctc.grnoc.iu.edu: {}
             pc1.sdn-test.grnoc.iu.edu: {}
@@ -540,7 +529,6 @@ all:
             rabbitmq.tsds.ctc.grnoc.iu.edu: {}
             rabbitmq.tsds2.grnoc.iu.edu: {}
             radb-populator-gpn.grnoc.iu.edu: {}
-            radb-populator.areon.net: {}
             radb-populator.oshean.org: {}
             radius-dev-ol8.grnoc.iu.edu: {}
             radius-dev.grnoc.iu.edu: {}
@@ -562,7 +550,6 @@ all:
             radius.fyvl.areon.net: {}
             radius.nlrk.areon.net: {}
             radius.noc.onenet.net: {}
-            rainier-dev.grnoc.iu.edu: {}
             rancid-01.globalnoc.mcnc.org: {}
             rancid-02.globalnoc.mcnc.org: {}
             rancid-test-01.globalnoc.mcnc.org: {}
@@ -577,9 +564,11 @@ all:
             routerproxy.bldc.net.cen.ct.gov: {}
             routerproxy.bldc.oshean.org: {}
             routerproxy.ehct.net.cen.ct.gov: {}
+            routerproxy.fyvl.areon.net: {}
             routerproxy.grnoc.iu.edu: {}
             routerproxy.linkoregon.org: {}
-            rpki.areon.net: {}
+            rpki-new.bldc.indiana.gigapop.net: {}
+            rpki-new.ctc.indiana.gigapop.net: {}
             rpki.bldc.oshean.org: {}
             rpki.ctc.indiana.gigapop.net: {}
             rpki.ctc.oshean.org: {}
@@ -636,7 +625,6 @@ all:
             snapp-portal-02.globalnoc.mcnc.org: {}
             snapp-portal-test-01.globalnoc.mcnc.org: {}
             snapp-portal-test-new-01.globalnoc.mcnc.org: {}
-            snapp-portal.noc.keystoneren.org: {}
             snapp-rabbit-01.globalnoc.mcnc.org: {}
             snapp-rabbit-02.globalnoc.mcnc.org: {}
             snapp-rabbit-test-01.globalnoc.mcnc.org: {}
@@ -691,7 +679,6 @@ all:
             syslog-os.fyvl.areon.net: {}
             syslog-os.nlrk.areon.net: {}
             syslog-os2.bldc.net.cen.ct.gov: {}
-            syslog.areon.net: {}
             syslog.bldc.grnoc.iu.edu: {}
             syslog.bldc.net.cen.ct.gov: {}
             syslog.bldc.oshean.org: {}
@@ -722,7 +709,6 @@ all:
             veorlows.grnoc.iu.edu: {}
             vm.bldc.grnoc.iu.edu: {}
             vnet.grnoc.iu.edu: {}
-            vpn.light.globalnoc.iu.edu: {}
             w-01.k8s.globalnoc.mcnc.org: {}
             w-02.k8s.globalnoc.mcnc.org: {}
             w1.bldc.k8s.grnoc.iu.edu: {}
@@ -765,7 +751,9 @@ all:
             w3.k8s.noc.onenet.net: {}
             w3.nlrk.k8s.areon.net: {}
             w4.bldc.k8s.grnoc.iu.edu: {}
+            w4.bldc.k8s.oshean.org: {}
             w4.ctc.k8s.grnoc.iu.edu: {}
+            w4.ctc.k8s.oshean.org: {}
             w4.k8s.noc.onenet.net: {}
             w5.bldc.k8s.grnoc.iu.edu: {}
             w5.ctc.k8s.grnoc.iu.edu: {}
@@ -856,6 +844,8 @@ all:
             w2.ctc.k8s.net.internet2.edu: {}
             w3.bldc.k8s.net.internet2.edu: {}
             w3.ctc.k8s.net.internet2.edu: {}
+            w4.bldc.k8s.net.internet2.edu: {}
+            w4.ctc.k8s.net.internet2.edu: {}
         nwave:
           hosts:
             account.bldc.nwave.noaa.gov: {}
@@ -870,7 +860,6 @@ all:
             carto-new.bldc.nwave.noaa.gov: {}
             carto-new.ctc.nwave.noaa.gov: {}
             cloud.boul.nwave.noaa.gov: {}
-            cobbler.bldc.nwave.noaa.gov: {}
             compute.cloud.ctc.nwave.noaa.gov: {}
             compute2.cloud.ctc.nwave.noaa.gov: {}
             compute3.cloud.ctc.nwave.noaa.gov: {}
@@ -959,11 +948,11 @@ all:
             ngfs-rabbitmq1.ctc.nwave.noaa.gov: {}
             obj.cloud.bldc.nwave.noaa.gov: {}
             obj.cloud.ctc.nwave.noaa.gov: {}
-            ol8.ctc.nwave.noaa.gov: {}
             openbmp-stage.ctc.nwave.noaa.gov: {}
             openbmp.bldc.nwave.noaa.gov: {}
             openbmp.boul.nwave.noaa.gov: {}
             openbmp.ctc.nwave.noaa.gov: {}
+            openvox.nwave.noaa.gov: {}
             otp-new.bldc.nwave.noaa.gov: {}
             otp-new.boul.nwave.noaa.gov: {}
             otp-new.ctc.nwave.noaa.gov: {}
@@ -1016,7 +1005,6 @@ all:
             perf01.gait02.nwave.noaa.gov: {}
             perf01.gett01.nwave.noaa.gov: {}
             perf01.gibs01.nwave.noaa.gov: {}
-            perf01.gpor01.nwave.noaa.gov: {}
             perf01.gree01.nwave.noaa.gov: {}
             perf01.gree02.nwave.noaa.gov: {}
             perf01.guam01.nwave.noaa.gov: {}
@@ -1107,8 +1095,6 @@ all:
             syslog-d1.ctc.nwave.noaa.gov: {}
             syslog-d2.bldc.nwave.noaa.gov: {}
             syslog-d2.ctc.nwave.noaa.gov: {}
-            syslog-d3.bldc.nwave.noaa.gov: {}
-            syslog-d3.ctc.nwave.noaa.gov: {}
             syslog-m.boul.nwave.noaa.gov: {}
             syslog-m2.bldc.nwave.noaa.gov: {}
             syslog-m2.ctc.nwave.noaa.gov: {}
@@ -1119,7 +1105,6 @@ all:
             tenable.ctc.nwave.noaa.gov: {}
             tools.clpk.erav.nwave.noaa.gov: {}
             tools.denv.erav.nwave.noaa.gov: {}
-            ubuntu.ctc.nwave.noaa.gov: {}
             unlock.bldc.nwave.noaa.gov: {}
             vm-nms.denv.wireless.nwave.noaa.gov: {}
             w1.bldc.k8s.nwave.noaa.gov: {}
@@ -1164,6 +1149,7 @@ all:
             otp.bldc.scinet.usda.gov: {}
             otp.ctc.scinet.usda.gov: {}
             perf.bldc.scinet.usda.gov: {}
+            perf01.aber.scinet.usda.gov: {}
             perf01.akrn.scinet.usda.gov: {}
             perf01.ames.scinet.usda.gov: {}
             perf01.ath.scinet.usda.gov: {}
@@ -1188,6 +1174,7 @@ all:
             perf01.daws.scinet.usda.gov: {}
             perf01.dubo.scinet.usda.gov: {}
             perf01.elan.scinet.usda.gov: {}
+            perf01.elre.scinet.usda.gov: {}
             perf01.farg.scinet.usda.gov: {}
             perf01.faye.scinet.usda.gov: {}
             perf01.flor.scinet.usda.gov: {}
@@ -1225,6 +1212,7 @@ all:
             perf01.peor.scinet.usda.gov: {}
             perf01.popl.scinet.usda.gov: {}
             perf01.rale.scinet.usda.gov: {}
+            perf01.reno.scinet.usda.gov: {}
             perf01.sali.scinet.usda.gov: {}
             perf01.schr.scinet.usda.gov: {}
             perf01.sidn.scinet.usda.gov: {}
