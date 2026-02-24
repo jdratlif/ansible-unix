@@ -44,13 +44,13 @@ ssh_host_options_extra:
     IdentityFile: ~/.ssh/jdratlif.pub
   beelink:
     <<: *laptops
-  pangolin16:
+  pangolin:
     <<: *laptops
   yoga4:
     <<: *laptops
   gmktec: &homelab
     IdentityFile: ~/.ssh/xaiver.pub
-  pve:
+  podman:
     <<: *homelab
   leap: &bastion-grnoc
     Hostname: leap.grnoc.iu.edu
