@@ -1,10 +1,10 @@
 ---
 services:
   devc:
-    image: ghcr.io/sysengquick-yt/ansible-unix-devc:latest
-    command: sleep infinity
+    command: sleep 3600
     environment:
       ANSIBLE_CONFIG: /workspace/.devcontainer/ansible.cfg
+    image: ghcr.io/sysengquick/ansible-unix-devc:latest
     init: true
     network_mode: host
     volumes:

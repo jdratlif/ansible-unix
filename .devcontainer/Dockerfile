@@ -1,42 +1,40 @@
-# start from python 3.11
-FROM python:3.11-slim
+FROM python:3.13-slim
 
 # set useful environment variables
 ENV DEBIAN_FRONTEND=noninteractive
 ENV PYTHONDONTWRITEBYTECODE=1
-
-# upgrade all packages
-RUN apt-get update && apt-get upgrade -y
+ENV PIP_NO_CACHE_DIR=1
 
 # install required packages
-RUN apt-get install -y --no-install-recommends \
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
     bash-completion \
+    iproute2 \
     iputils-ping \
     git \
     less \
+    locales \
     openssh-client \
     sshpass \
-  && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
+# add en_US.UTF-8 locales
+RUN sed -i 's/^# *en_US.UTF-8/en_US.UTF-8/' /etc/locale.gen \
+  && locale-gen en_US.UTF-8
+
 # install ansible packages
-RUN python3 -m pip install 'ansible-core<2.18' ansible-lint
+RUN python3 -m pip install 'ansible-core>=2.19,<2.20' ansible-lint
 
-# install ansible collection requirements
-COPY collections/ansible_collections/sysengquick/unix/galaxy.yml /tmp
-RUN ansible-galaxy collection install /tmp \
-  && rm -rf ~/.ansible/collections/ansible_collections/sysengquick \
+# install the collection dependencies declared in galaxy.yml
+COPY collections/ansible_collections/sysengquick/unix/galaxy.yml /tmp/galaxy.yml
+RUN python3 -c "import subprocess, yaml; deps = yaml.safe_load(open('/tmp/galaxy.yml'))['dependencies']; subprocess.run(['ansible-galaxy', 'collection', 'install', *(f'{n}:{v}' for n, v in deps.items())], check=True)" \
   && rm -f /tmp/galaxy.yml
-
-# install ansible 2.16 in venv
-RUN python3 -m venv /ansible216 \
-    && /ansible216/bin/python3 -m pip install 'ansible-core<2.17'
 
 # copy all profile.d scripts
 COPY .devcontainer/files/etc/profile.d/*.sh /etc/profile.d/
 
 # source all profile.d scripts in bashrc
-RUN echo 'for script in /etc/profile.d/*.sh; do . "$script"; done' >> /root/.bashrc
+RUN echo 'for script in /etc/profile.d/*.sh; do . "$script"; done' >> /etc/bash.bashrc
 
 # use bash instead of python as our default command
 CMD ["/bin/bash"]

@@ -1,7 +1,7 @@
 server() {
     local pattern="${1:-docker}"
     shift
-    /ansible216/bin/ansible-playbook sysengquick.unix.server -e "targets=$pattern" "$@"
+    ansible-playbook sysengquick.unix.server -e "targets=$pattern" "$@"
 }
 
 debian() {
