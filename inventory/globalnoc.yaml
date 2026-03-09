@@ -923,6 +923,7 @@ all:
             nessus-manager.ctc.nwave.noaa.gov: {}
             nessus.bldc.nwave.noaa.gov: {}
             neteng.bldc.nwave.noaa.gov: {}
+            sandbox.nwave.noaa.gov: {}
             network-troubleshooter-new.bldc.nwave.noaa.gov: {}
             ngfs-aggregator1.bldc.nwave.noaa.gov: {}
             ngfs-coordinator1.bldc.nwave.noaa.gov: {}
