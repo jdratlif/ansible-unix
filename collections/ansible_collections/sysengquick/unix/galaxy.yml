@@ -40,8 +40,8 @@ tags: [linux]
 # L(specifiers,https://python-semanticversion.readthedocs.io/en/latest/#requirement-specification). Multiple version
 # range specifiers can be set and are separated by ','
 dependencies:
-  ansible.posix: ">=2.1.0"
-  community.general: ">=9.5.11"
+  ansible.posix: ">=2.2.0,<2.3.0"
+  community.general: ">=13.5.0,<14.0.0"
 
 # The URL of the originating SCM repository
 repository: http://github.com/sysengquick-yt/ansible-unix
