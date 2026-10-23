@@ -5,8 +5,7 @@ bash_aliases:
   fix_perms: find . \( -type f -exec chmod 644 {} + \) -o \( -type d -exec chmod 755 {} + \)
   ipt: sudo iptables --line-numbers -nvL
   ip6t: sudo ip6tables --line-numbers -nvL
-
-  # display bash functions, like alias does for aliases
+  ssh_kill: pkill -u "$USER" -f '\[mux\]'
   fcns: compgen -A function | grep -v '^_'
 
 bash_environment:
@@ -32,46 +31,38 @@ bash_functions:
 
 bash_prompt: |-
   __bash_prompt() {
-      local last_exit_code=$?
+      # switch arrow color to red if exit code is non-zero
+      __bp_arrow() {
+        local exit_code=$?
+        [[ $exit_code -ne 0 ]] && echo -n $'\033[1;31m➜\033[0m' || echo -n "➜"
 
-      # Colors
-      local green='\[\033[32m\]'
-      local red='\[\033[1;31m\]'
-      local blue='\[\033[1;34m\]'
-      local yellow='\[\033[33m\]'
-      local cyan='\[\033[36m\]'
-      local reset='\[\033[0m\]'
+        # preserve exit_code
+        return $exit_code
+      }
 
-      # Virtual environment in cyan
-      local venv=""
-      if [[ -n "$VIRTUAL_ENV" ]]; then
-          venv="${cyan}($(basename $VIRTUAL_ENV)) ${reset}"
-      fi
+      # display error code if non-zero in red
+      __bp_error() {
+        local exit_code=$?
+        [[ $exit_code -ne 0 ]] && echo -n $'\033[1;31m'"[$exit_code]"$'\033[0m '
+
+        # preserve exit_code
+        return $exit_code
+      }
+
+      # display the git branch in yellow if one exists
+      __bp_git() {
+        local branch=$(git --no-optional-locks symbolic-ref --short HEAD 2>/dev/null || git --no-optional-locks rev-parse --short HEAD 2>/dev/null)
+        [[ -n "$branch" ]] && echo -n $'\033[33m'" (${branch})"$'\033[0m'
+      }
 
       # Username in green
-      local username="${green}\u${reset}@${blue}\H${reset}"
-
-      # Arrow and error display
-      local arrow="➜"
-      local error_display=""
-
-      if [[ $last_exit_code -ne 0 ]]; then
-          arrow="${red}➜${reset}"
-          error_display="${red}[${last_exit_code}]${reset} "
-      fi
+      local username="\[\033[32m\]\u\[\033[0m\]@\[\033[1;34m\]\H\[\033[0m\]"
 
       # Current path in blue
-      local path="${blue}\w${reset}"
-
-      # Git branch in yellow (if exists)
-      local git_branch
-      git_branch=$(git --no-optional-locks symbolic-ref --short HEAD 2>/dev/null || git --no-optional-locks rev-parse --short HEAD 2>/dev/null)
-
-      if [[ -n "$git_branch" ]]; then
-          git_branch="${yellow} (${git_branch})${reset}"
-      fi
+      local path="\[\033[1;34m\]\w\[\033[0m\]"
 
       # create full prompt
-      PS1="${error_display}${venv}${username} ${arrow} ${path}${git_branch} $ "
+      PS1="\$(__bp_error)${username} \$(__bp_arrow) ${path}\$(__bp_git)\n$ "
+      unset -f __bash_prompt
   }
-  PROMPT_COMMAND=__bash_prompt
+  __bash_prompt

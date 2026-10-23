@@ -1,0 +1,23 @@
+---
+apps_packages:
+  - acl
+  - btop
+  - cifs-utils
+  - freerdp3-x11
+  - git
+  - openssh-server
+  - podman-docker
+  - smplayer
+  - tmux
+  - vim
+  - virt-viewer
+
+apps_pkgs:
+  code: https://vscode.download.prss.microsoft.com/dbazure/download/stable/618725e67565b290ba4da6fe2d29f8fa1d4e3622/code_1.107.0-1765353552_amd64.deb
+  google-chrome-stable: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+# add apps_special_tailscale_authkey if you want to start the tailnet
+# do not place this in git -- it's a password!
+apps_special:
+  - tailscale
+  - uv

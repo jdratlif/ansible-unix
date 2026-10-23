@@ -1,0 +1,8 @@
+---
+ssh_common_options_extra:
+  ControlMaster: auto
+  ControlPath: ~/.ssh/cp-%r@%h:%p
+  ControlPersist: 5m
+  CanonicalizeHostname: "yes"
+  CanonicalizeMaxDots: 2
+  CanonicalDomains: scinet.usda.gov

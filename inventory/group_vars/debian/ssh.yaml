@@ -1,0 +1,8 @@
+---
+ssh_authorized_keys_extra:
+  - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBc+bQFdinbcO0eHrnxfLM+OroTUOt3RKHkTbrh6hNfm
+
+ssh_common_options_extra:
+  ControlMaster: auto
+  ControlPath: ~/.ssh/cp-%r@%h:%p
+  ControlPersist: 5m
