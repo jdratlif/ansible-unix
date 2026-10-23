@@ -1,0 +1,4 @@
+---
+bash_aliases_extra:
+  areon_vpn: "sudo openconnect --protocol=gp https://vpn1.areon.net"
+  rdp: "xfreerdp /u:john@technoplaza.net /d: /f /v:xaiver.gorgon-beardie.ts.net"

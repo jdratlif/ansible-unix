@@ -1,6 +1,0 @@
----
-apps_packages:
-  - btop
-  - chromium
-  - git
-  - vim-default-editor

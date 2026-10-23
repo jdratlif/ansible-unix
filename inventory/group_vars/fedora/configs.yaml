@@ -1,0 +1,18 @@
+---
+configs_files_extra:
+  1Password:
+    directory: .config/1Password/ssh
+    files: [agent.toml]
+  kitty: {}
+  logind:
+    become: true
+    directory: /etc/systemd/logind.conf.d
+    files: [handle-lid-switch.conf]
+  vconsole:
+    become: true
+    directory: /etc
+  vscode:
+    directory: .vscode
+    files: [argv.json]
+  waybar:
+    files: [config.jsonc]

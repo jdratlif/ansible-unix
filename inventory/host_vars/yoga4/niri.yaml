@@ -1,0 +1,5 @@
+---
+niri_kdl_outputs:
+  eDP-1: |-
+    mode "2560x1440@59.998"
+    scale 1.33
