@@ -24,6 +24,8 @@ ssh_host_options_extra:
     ForwardAgent: ~/.1password/agent.sock
   sandbox.nwave.noaa.gov:
     ForwardAgent: ~/.1password/agent.sock
+  sandbox.ctc.scinet.usda.gov:
+    ForwardAgent: ~/.1password/agent.sock
   puppet7.grnoc.iu.edu: {}
   puppet7.bldc.nwave.noaa.gov: {}
   leap: &bastion-grnoc
