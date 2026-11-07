@@ -1,19 +1,21 @@
 ---
+apps_flatpaks:
+  - org.remmina.Remmina
+
 apps_packages:
   - acl
   - bind-utils
   - btop
-  - cascadia-fonts-all
+  # only for niri
+  # - cascadia-fonts-all
   - code
   - cifs-utils
   - docker-compose
-  - evolution-ews
   - firefox
-  - freerdp
   - git
-  - gnome-calculator
   - iwlwifi-mvm-firmware
   - kitty
+  - openconnect
   - opensc
   - openssl
   - pciutils
