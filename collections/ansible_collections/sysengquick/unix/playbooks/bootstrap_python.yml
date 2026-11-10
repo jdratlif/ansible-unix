@@ -1,0 +1,37 @@
+---
+- name: Bootstrap Python for Ansible 2.21
+  hosts: all
+  become: true
+  gather_facts: false
+  tasks:
+    - name: Install a supported Python interpreter
+      ansible.builtin.raw: |
+        set -eu
+        . /etc/os-release
+
+        case "${ID}:${VERSION_ID%%.*}" in
+          centos:7)
+            interpreter=/usr/bin/python3.9
+            if [ ! -x "$interpreter" ]; then
+              rpm -Uvh --nodeps \
+                https://build.grnoc.iu.edu/repo/rhel/7/x86_64/python39-3.9.25-1.el7.x86_64.rpm
+              printf '%s\n' PYTHON_BOOTSTRAP_CHANGED
+            fi
+            ;;
+          ol:8)
+            interpreter=/usr/bin/python3.12
+            if [ ! -x "$interpreter" ]; then
+              dnf -y install python3.12
+              printf '%s\n' PYTHON_BOOTSTRAP_CHANGED
+            fi
+            ;;
+          *)
+            printf 'Unsupported platform: %s %s\n' "$ID" "$VERSION_ID" >&2
+            exit 1
+            ;;
+        esac
+
+        test -x "$interpreter"
+        "$interpreter" --version
+      changed_when: "'PYTHON_BOOTSTRAP_CHANGED' in python_bootstrap.stdout"
+      register: python_bootstrap
